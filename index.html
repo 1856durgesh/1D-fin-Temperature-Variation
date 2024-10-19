@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heat Conduction in Fin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Heat Conduction in Fin Simulation</h2>
+
+  <form id="finForm">
+    <label for="rho">Density (ρ, kg/m<sup>3</sup>):</label>
+    <input type="number" id="rho" name="rho" value="7850"><br>
+
+    <label for="Cp">Specific Heat Capacity (C<sub>p</sub>, J/kg·K):</label>
+    <input type="number" id="Cp" name="Cp" value="473"><br>
+
+    <label for="k">Thermal Conductivity (k, W/m·K):</label>
+    <input type="number" id="k" name="k" value="40"><br>
+
+    <label for="h">Convective Heat Transfer Coefficient (h, W/m<sup>2</sup>·K):</label>
+    <input type="number" id="h" name="h" value="10"><br>
+
+    <label for="r">Radius of Fin (r, m):</label>
+    <input type="number" id="r" name="r" step="0.001" value="0.00318"><br>
+
+    <label for="T_inf">Base Temperature (T<sub>b</sub>, °C):</label>
+    <input type="number" id="T2" name="T2" value="100"><br>
+
+    <label for="T_inf">Ambient Temperature (T<sub>∞</sub>, °C):</label>
+    <input type="number" id="T_inf" name="T_inf" value="25"><br>
+
+    <label for="L">Fin Length (L, m):</label>
+    <input type="number" id="L" name="L" step="0.01" value="0.1"><br>
+
+    <label for="dx">Spatial Step Size (Δx, m):</label>
+    <input type="number" id="dx" name="dx" step="0.001" value="0.01"><br>
+
+    <label for="dt">Time Step Size (Δt, s):</label>
+    <input type="number" id="dt" name="dt" step="0.001" value="0.01"><br>
+
+    <label for="Nt">Number of Time Steps (Nt):</label>
+    <input type="number" id="Nt" name="Nt" value="1000"><br>
+
+    <label for="finType">Fin Type:</label>
+    <div class="button">
+      <button type="button" onclick="longFin()">Calculate for Long FIn</button>
+      <button type="button" onclick="insulatedFin()">Calculate for Insulated FIn</button>
+      <button type="button" onclick="convectionFin()">Calculate for Convection At Tip  FIn</button>
+    </div>
+  </form>
+  <button type="button" onclick="relode()">Remove all results</button>
+
+  <h3>Results:</h3>
+  <canvas id="temperatureChart" width="400" height="200"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="finCalculator.js"></script> <!-- Main script file -->
+</body>
+
+</html>

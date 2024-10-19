@@ -1,0 +1,96 @@
+   /* General Styling */
+   body {
+    font-family: 'Roboto', sans-serif;  /* Modern, clean font */
+    background-color: #1c1c1c;  /* Darker background */
+    color: #f0f0f0;  /* Softer text color for better contrast */
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    color: #4ebdd9;  /* Bright, pleasant blue for headings */
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  h3 {
+    color: #4ebdd9;  /* Matching color for results heading */
+    margin-top: 30px;
+    font-size: 22px;
+    padding-left: 20px;
+  }
+
+  form {
+    padding: 25px;
+    background-color: #292929;  /* Slightly lighter background for form */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Softer shadow */
+    max-width: 500px;
+    margin: 20px;  /* Form no longer centered */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #dcdcdc;  /* Softer label color for better readability */
+  }
+
+  input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #777;  /* Softer border color */
+    background-color: #333333;  /* Darker input background */
+    color: #ffffff;  /* Bright text in input fields */
+    font-size: 16px;
+  }
+
+
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4ebdd9;  /* Brighter, noticeable button */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #3a99a6;  /* Darker blue on hover */
+  }
+
+  pre {
+    background-color: #292929;
+    color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #777;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    margin: 20px;
+    max-width: 500px;
+    word-wrap: break-word;  /* Ensure long text wraps */
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    form, pre {
+      max-width: 95%;  /* Fill most of the screen without being too wide */
+      margin: 10px;
+    }
+
+    h2, h3 {
+      font-size: 24px;
+      padding-left: 10px;
+    }
+  }
